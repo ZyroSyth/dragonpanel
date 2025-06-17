@@ -5,7 +5,7 @@ echo "Credit Goes To HopingBoys"
 
 echo "Panel Installation Started"
 
-# Step 0: root
+# Step 0: sudo su
 
 sudo su
 
