@@ -1,0 +1,44 @@
+#!/bin/bash
+# Credit HopingBoys
+
+echo "Credit Goes To HopingBoys"
+
+echo "Panel Installation Started"
+
+# Step 0: root
+
+sudo su
+
+# Step 1: Installing Some Files
+
+git clone https://github.com/dragonlabsdev/v2panel
+
+echo "Files Installation Complete ✅"
+
+# Step 2: Installing Node.Js
+
+curl -sL https://deb.nodesource.com/setup_23.x | sudo bash -
+apt-get install nodejs git
+
+echo "Node.Js Installation Complete ✅"
+
+# Step 3: Panel Directory
+
+cd v2panel
+
+# Step 4: Unziping Files
+
+apt install zip -y && unzip panel.zip && cd panel
+
+# Step 5: Creating User For Admin Account
+
+npm install && npm run seed && npm run createUser
+
+# Step 6: Updating And Upgrading Files
+
+apt update
+apt upgrade
+
+# Step 7: Starting
+
+node .
